@@ -1,0 +1,156 @@
+.form-outer.three {
+	position: relative;
+
+	.form-group {
+		position: relative;
+		margin-bottom: 25px;
+
+		&.has-error {
+
+			.help-block {
+				color: #f7ff00;
+				font-size: 12px;
+
+				ul {
+					margin-bottom: 0;
+				}
+			}
+
+			.flexi-label.flexing {
+
+				span {
+					border: 1px solid $red !important;
+				}
+			}
+		}
+
+		&.has-success {
+
+			.flexi-label.flexing {
+
+				span {
+					border: 1px solid $bright-green !important;
+				}
+			}
+		}
+
+		.flexi-label {
+			position: absolute;
+			top: 6px;
+			left: 15px;
+			width: 100%;
+			font-size: 15px;
+			color: $placeholder;
+			font-weight: 300;
+			letter-spacing: 1px;
+			z-index: 0;
+			@include transition(0.4s ease-in-out);
+
+			span {
+				position: absolute;
+				top: 28px;
+				left: -15px;
+				background-color: rgba(255,255,255,0.3);
+				height: 1px;
+				width: 100%;
+				border-radius: 0;
+				@include transition(0.4s ease-in-out);
+			}
+
+			&.flexing {
+				top: -20px;
+				color: rgba(255,255,255,0.5);
+				font-size: 12px;
+
+				span {
+					top: 18px;
+					height: 39px;
+					background-color: rgba(255,255,255,0.2);
+				}
+			}
+		}
+
+		.form-control {
+			color: $placeholder;
+			border: none;
+			border-bottom: 1px solid rgba(255,255,255,0);
+			box-shadow: none;
+			font-weight: 300;
+			letter-spacing: 1px;
+			background-color: transparent;
+			height: 35px;
+			font-size: 18px;
+			border-radius: 0;
+			padding-left: 15px;
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+
+	.btn-submit {
+		color: $placeholder;
+		font-weight: 300;
+		padding: 8px 30px;
+		width: 150px;
+		height: 40px;
+		text-align: center;
+		border: 1px solid $placeholder;
+		text-decoration: none !important;
+		background-color: transparent;
+		position: absolute;
+		left: 15px;
+
+		&:focus {
+			color: $placeholder;
+		}
+
+		span:first-child {
+			display: inline-block;
+		}
+
+		span:last-child {
+			display: none;
+			position: absolute;
+			left: 47%;
+			@include transition(0.6s);
+		}
+
+		&.success {
+			color: #fff;
+			border: 1px solid transparent;
+			height: auto;
+			width: auto;
+			padding: 40px 40px;
+			border-radius: 50%;
+			background-color: rgba(94, 236, 56, 0.7);
+			top: 50%;
+			left: calc(50% - 35px);
+			right: auto;
+
+			span:first-child {
+				display: none;
+			}
+
+			span:last-child {
+				display: inline-block;
+				transform: scale(2);
+				left: 35px;
+				top: 28px;
+			}
+		}
+	}
+
+	&.success {
+
+		.floating-labels {
+			display: inline-table;
+			height: 100px;
+
+			.form-group {
+				display: none;
+			}
+		}
+	}
+}
