@@ -1,4 +1,5 @@
-jQuery(document).ready(function($){
+$(document).ready(function(){
+	window.console.log("Mae govannen mellon!");
 
 	if( $('.floating-labels').length > 0 ) moveLabel();
 
@@ -18,10 +19,6 @@ jQuery(document).ready(function($){
 	function checkVal(inputField) {
 		( inputField.val() === '' ) ? inputField.prev('.flexi-label').removeClass('flexing') : inputField.prev('.flexi-label').addClass('flexing');
 	}
-});
-
-$(document).ready(function() {
-	window.console.log("Mae govannen mellon!");
 
 	$('.btn-submit').on('click', function(e){
 		$(this).addClass('success');
@@ -42,4 +39,5 @@ $(document).ready(function() {
 	});
 
 });
+
 
